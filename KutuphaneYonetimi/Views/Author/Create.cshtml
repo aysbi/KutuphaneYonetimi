@@ -1,0 +1,34 @@
+﻿@model AuthorCreateViewModel
+@{
+    ViewData["Title"] = "New Author";
+}
+
+<div class="display-6">
+    Add New Author
+</div>
+
+
+<form method="post" asp-Controller="Author" asp-action="Create">
+    <div class="text-danger" asp-validation-summary="All"></div>
+
+    <div class="form-group my-2">
+        <label asp-for="FirstName"></label>
+        <input asp-for="FirstName" class="form-control" />
+    </div>
+
+    <div class="form-group my-2">
+        <label asp-for="LastName"></label>
+        <input asp-for="LastName" class="form-control" />
+    </div>
+
+    <div class="form-group my-2">
+        <label asp-for="DateOfBirth"></label>
+        <input asp-for="DateOfBirth" class="form-control" />
+    </div>
+
+    <div>
+        <button class="btn btn-primary" type="submit">Add</button>
+        <a class="btn btn-danger" asp-controller="Home" asp-action="Index">Cancel</a>
+    </div>
+
+</form>

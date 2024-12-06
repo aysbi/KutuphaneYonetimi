@@ -1,0 +1,14 @@
+﻿@model KutuphaneYonetimi.Models.Book
+@{
+    ViewData["Title"] = "Deleting...";
+}
+
+<h1>Are You Sure?</h1>
+
+<form asp-controller="Book" asp-action="Delete2" asp-route-id= "@Model.Id" method="post">
+
+    <p>&quot;@Model.Title&quot; will be deleted.</p>
+
+    <button class="btn btn-danger" type="submit">Delete</button>
+    <a class="btn btn-secondary" asp-action="Index">Cancel</a> 
+</form>

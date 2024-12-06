@@ -1,0 +1,34 @@
+﻿@model BookDetailsViewModel
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details of @Model.Title.ToUpper()</h2>
+
+<div class="container">
+
+    <dl class="row">
+        <dt class="col-sm-3">Title</dt>
+        <dd class="col-sm-9">@Model.Title</dd>
+
+        <dt class="col-sm-3">Author</dt>
+        <dd class="col-sm-9">@Model.AuthorName</dd>
+
+        <dt class="col-sm-3">Author's Date of Birth</dt>
+        <dd class="col-sm-9">@Model.AuthorBirthday.ToShortDateString()</dd>
+
+        <dt class="col-sm-3">Genre</dt>
+        <dd class="col-sm-9">@Model.Genre</dd>
+
+        <dt class="col-sm-3">Publish Date</dt>
+        <dd class="col-sm-9">@Model.PublishDate.ToShortDateString()</dd>
+
+        <dt class="col-sm-3">ISBN</dt>
+        <dd class="col-sm-9">@Model.ISBN</dd>
+
+        <dt class="col-sm-3">Copies Available</dt>
+        <dd class="col-sm-9">@Model.CopiesAvailable</dd>
+    </dl>
+
+    <a class="btn btn-primary" asp-asp-controller="Book" asp-action="Index">Back to List</a>
+</div>

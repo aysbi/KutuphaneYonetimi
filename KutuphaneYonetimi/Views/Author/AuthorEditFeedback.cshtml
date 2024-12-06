@@ -1,0 +1,17 @@
+﻿@model EditAuthorViewModel
+@{
+    ViewData["Title"] = "Completed";
+}
+
+<div>
+    <h3 class="display-4">@Model.FirstName @Model.LastName.ToUpper()</h3>
+    <p class="lead">The author is <mark>edited</mark></p>
+    <p class="lead">Many thanks for your work</p>
+
+    <hr />
+
+    <div class="btn-group">
+        <a class="btn btn-outline-success" asp-controller="Author" asp-action="Index">Author List</a>
+        <a class="btn btn-success" asp-action="Index" asp-controller="Home">Home</a>
+    </div>
+</div>

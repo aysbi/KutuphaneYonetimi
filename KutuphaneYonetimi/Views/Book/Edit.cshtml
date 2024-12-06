@@ -1,0 +1,76 @@
+﻿@model EditBookViewModel
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<div class="display-6">
+    Edit
+</div>
+
+
+<form method="post" asp-controller="Book" asp-action="Edit">
+    <div class="text-danger" asp-validation-summary="All"></div>
+
+    <input type="hidden" asp-for="Id" />
+    <input type="hidden" asp-for="AuthorId" />
+    <input type="hidden" asp-for="BirtdayOfAuthor" />
+
+    <div class="form-group my-2">
+        <label asp-for="Title"></label>
+        <input asp-for="Title" class="form-control" />
+    </div>
+
+
+    <div class="form-group my-2">
+        <label asp-for="AuthorFirstName"></label>
+        <input asp-for="AuthorFirstName" class="form-control" />
+    </div>
+
+
+    <div class="form-group my-2">
+        <label asp-for="AuthorLastName"></label>
+        <input asp-for="AuthorLastName" class="form-control" />
+    </div>
+
+    <div class="form-group my-2">
+        <label asp-for="Genre"></label>
+        <select asp-for="Genre" class="form-control">
+            <option value="Adventure">Adventure</option>
+            <option value="Mystery">Mystery</option>
+            <option value="Crime">Crime</option>
+            <option value="Thriller">Thriller</option>
+            <option value="Fantasy">Fantasy</option>
+            <option value="Romance">Romance</option>
+            <option value="Historical Fiction">Historical Fiction</option>
+            <option value="Horror">Horror</option>
+            <option value="Biography/Autobiography">Biography/Autobiography</option>
+            <option value="Science">Science</option>
+            <option value="Business/Economics">Business/Economics</option>
+            <option value="Health/Wellness">Health/Wellness</option>
+            <option value="CookBook">CookBook</option>
+            <option value="Other Genres">Other</option>
+        </select>
+    </div>
+
+    <div class="form-group my-2">
+        <label asp-for="ISBN"></label>
+        <input asp-for="ISBN" class="form-control" />
+    </div>
+
+    <div class="form-group my-2">
+        <label asp-for="DateOfPublish"></label>
+        <input asp-for="DateOfPublish" class="form-control" type="date" />
+    </div>
+
+    <div class="form-group my-2">
+        <label asp-for="CopiesAvailable"></label>
+        <input asp-for="CopiesAvailable" class="form-control" type="number" />
+
+    </div>
+
+    <div>
+        <button class="btn btn-primary" type="submit">Save Changes</button>
+        <a class="btn btn-danger" asp-controller="Book" asp-action="Index">Cancel</a>
+    </div>
+
+</form>

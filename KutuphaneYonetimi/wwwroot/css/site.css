@@ -1,0 +1,41 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+.centered-line {
+    width: 50%; /* Çizginin geniþliði (sayfanýn %50'si kadar) */
+    height: 1px; /* Çizginin kalýnlýðý */
+    background-color: rgba(128, 128, 128, 0.5); /* Silik bir gri renk (RGBA ile þeffaflýk ayarlanýr) */
+    margin: 0 auto; /* Ortalamak için */
+    position: center;
+    top: 50%; /* Sayfanýn ortasýna yerleþtirme */
+    transform: translateY(-50%); /* Doðru bir þekilde merkezleme */
+}
+
+.page-container {
+    display: flex; /* Flexbox kullanýmý */
+    flex-direction: column; /* Elemanlarý dikey olarak sýralar */
+    align-items: center; /* Yatayda ortalar */
+    justify-content: center; /* Dikeyde ortalar */
+    height: 50vh; /* Tüm sayfa yüksekliði */
+    text-align: center; /* Metni ortala */
+}
